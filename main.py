@@ -5,7 +5,7 @@ from dbo import MongoDriver
 driver = webdriver.Chrome()
 driver.get("https://ecuador.patiotuerca.com/")
 search_box = driver.find_element(by=By.CSS_SELECTOR, value="#search-list")
-search_box.send_keys("Audi A4")
+search_box.send_keys("Suzuki")
 
 search_button = driver.find_element(by=By.CSS_SELECTOR, value="#openSearch > div > div > div.search-ots.false > img")
 search_button.click()
@@ -29,7 +29,7 @@ for card in vehicle_cards:
             "price": price
         }
 
-        mongodb.insert_record(record=coche_actual, username="audi")
+        mongodb.insert_record(record=coche_actual, username="suzuki")
 
         print("++++++++++++++++++++++++++++++++")
     except Exception as e:

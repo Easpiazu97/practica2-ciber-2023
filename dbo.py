@@ -10,9 +10,9 @@ load_dotenv()
 class MongoDriver:
     def __init__(self):
 
-        user = os.getenv('MONGO_USER')
-        password = os.getenv('MONGO_PASSWORD')
-        hostname = os.getenv('MONGO_HOSTNAME')
+        user= os.getenv('MONGO_USER')
+        password= os.getenv('MONGO_PASSWORD')
+        hostname= os.getenv('MONGO_HOSTNAME')
 
         uri = f"mongodb+srv://{user}:{password}@{hostname}/?retryWrites=true&w=majority"
 
